@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>Test decode-2 details | Geohash | Test results</title>
+<link type='text/css' href='test-style.css' rel='stylesheet' />
+</head>
+<body>
+<h2>Test decode-2 details</h2>
+<a href="test-report-2008-06-29-1.html">Back</a>
+<pre>smoketest : decode-2
+  Condition: attempt to call `com.metabang.geohash-test::decode-string-to-lat/lon'
+which is an undefined function.
+  Code     : "
+  ((lift:ensure-same (com.metabang.geohash-test::decode-string-to-lat/lon
+                      \"ez\")
+                     (cons 42.1875 -5.625) :test 'equal))"
+  
+</pre><div id="footer">
+generated on June 29, 2008 23:15:02 GMT-0400</div>
+</body></html>

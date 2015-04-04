@@ -1,0 +1,1299 @@
+(
+(:results-for #P"/Users/gwking/darcs/geohash/lift-local.config")
+(:arguments (:suite geohash-test :result
+             #</Users/gwking/darcs/geohash/lift-local.config: no tests defined>))
+(:features (:acldns :split-sequence :com.metabang.trivial-timeout
+            :asdf-system-connections :asdf-install :|YACC Release 0.98|
+            :has-lockf :has-mkdtemp :asdf :hunchentoot-no-ssl :gwking
+            :allegro-cl-enterprise :ipv6 :acl-socket :hiper-socket
+            :profiler :multiprocessing :flavors :little-endian :gsgc
+            :compiler :use-structs-in-compiler :clos :verify-stack
+            :verify-car-cdr :target-mac :dynload :dlmac :unix :macosx32
+            :macosx :x86 :encapsulating-efs :relative-package-names
+            :module-versions :ieee :ieee-floating-point
+            :conforming-ieee :ics :common-lisp :ansi-cl
+            :draft-ansi-cl-2 :x3j13 :allegro :excl :franz-inc
+            :allegro-version>= :allegro-version= :new-environments
+            :symbol-value-vector :process7 :dynload-acl-library
+            :allegro-v8.1 :no-os-tls :tlsvalues :tlsbnp :ssl-support))
+(:datetime 3423784501)
+)
+(
+(:suite smoketest)
+(:name encode-1)
+(:start-time-universal 3423784501)
+(:end-time-universal 3423784501)
+(:problem-kind "Error")
+(:problem-step :testing)
+(:problem-condition "#<undefined-function @ #x10fb048a>")
+(:problem-condition-description "attempt to call `com.metabang.geohash-test::encode-lat/lon-to-string'
+which is an undefined function.")
+(:problem-backtrace "Evaluation stack:
+
+ ->(sys::..runtime-operation . :unknown-args)
+   (tpl:do-command \"zoom\" :from-read-eval-print-loop nil :count t :all
+                   t)
+   (lift::get-backtrace #1=#<undefined-function @ #x10fb048a>)
+   ((:internal
+     (method lift::run-test-internal
+      #4=(lift:test-mixin symbol . #2=(t)))
+     3)
+      #1#)
+   (signal #1#)
+   (error #1#)
+   (excl::undeffunc-handler
+      com.metabang.geohash-test::encode-lat/lon-to-string)
+   (excl::general-error-handler 23
+                                com.metabang.geohash-test::encode-lat/lon-to-string
+                                t t)
+   (excl::cer-general-error-handler-one 23
+                                        com.metabang.geohash-test::encode-lat/lon-to-string)
+   (com.metabang.geohash-test::encode-lat/lon-to-string 42.584 -5.59 1)
+   ((method lift::lift-test
+     (com.metabang.geohash-test::smoketest
+      (eql 'com.metabang.geohash-test::encode-1)))
+      #3=#<com.metabang.geohash-test::smoketest smoketest @ #x10fadf4a>
+      com.metabang.geohash-test::encode-1)
+   ((method lift::lift-test :around (lift:test-mixin . #2#)) #3#
+                                                             com.metabang.geohash-test::encode-1)
+   ((:internal (:effective-method 2 nil nil t t) 0) #3#
+                                                    com.metabang.geohash-test::encode-1)
+   (sys::..runtime-operation . :unknown-args)
+   ((:internal excl::effective-method-eql 0) #3#
+                                             com.metabang.geohash-test::encode-1)
+   (sys::..runtime-operation . :unknown-args)
+   (excl::initial-dfun (#3# com.metabang.geohash-test::encode-1)
+                       #<standard-generic-function lift::lift-test>)
+   ((method lift::run-test-internal #4#) #3#
+                                         com.metabang.geohash-test::encode-1
+                                         #5=#<#37=/Users/gwking/darcs/geohash/lift-local.config: no tests defined>)
+   (sys::..runtime-operation . :unknown-args)
+   (excl::checking-miss
+      #<standard-generic-function lift::run-test-internal>
+      #7=(#3# com.metabang.geohash-test::encode-1 #5#)
+      #<Function (method lift::run-test-internal #4#)>
+      #(0
+        #9=#(26776809 t
+             (lift::name lift::run-setup lift::done-setup?
+                         lift::done-dynamics? lift::prototypes
+                         lift::prototypes-initialized?
+                         lift::current-values lift::test-slot-names
+                         lift::current-step lift::current-method
+                         lift::save-equality-test lift::log-file
+                         lift::test-data lift::expected-failure-p
+                         lift::expected-error-p
+                         lift::expected-problem-p lift::suite-initargs
+                         lift::profile)
+             #() #<standard-class com.metabang.geohash-test::smoketest>
+             0 (t :unknown))
+        #6=#(18820024 t nil nil #<built-in-class symbol> 0 nil) nil nil
+        nil nil nil nil nil nil nil nil
+        #14=#(21884036 t
+              (lift::name lift::run-setup lift::done-setup?
+                          lift::done-dynamics? lift::prototypes
+                          lift::prototypes-initialized?
+                          lift::current-values lift::test-slot-names
+                          lift::current-step lift::current-method
+                          lift::save-equality-test lift::log-file
+                          lift::test-data lift::expected-failure-p
+                          lift::expected-error-p
+                          lift::expected-problem-p lift::suite-initargs
+                          lift::profile)
+              #() #<standard-class simple-http-test::test-http-resolve>
+              0 (t :unknown))
+        #6# nil nil))
+   ((:internal excl::update-to-checking-dfun 2) . #7#)
+   [... lift::run-test-internal ]
+   ((method lift::testsuite-run #8=(lift:test-mixin lift::test-result))
+      #3# #5#)
+   (sys::..runtime-operation . :unknown-args)
+   (excl::checking-miss
+      #24=#<standard-generic-function lift::testsuite-run>
+      #10=(#3# #5#) #<Function (method lift::testsuite-run #8#)>
+      #(0 nil nil nil nil nil nil nil nil #9#
+        #(18126831 t
+          (lift::results-for lift::tests-run lift::suites-run
+                             lift:failures lift:expected-failures
+                             lift:errors lift:expected-errors
+                             lift::test-mode lift::test-interactive?
+                             lift::real-start-time lift::start-time
+                             lift::end-time lift::real-end-time
+                             lift::real-start-time-universal
+                             lift::start-time-universal
+                             lift::end-time-universal
+                             lift::real-end-time-universal
+                             lift::properties lift::tests-to-skip)
+          #() #<standard-class lift::test-result> 0
+          ((:tests-to-skip :real-start-time-universal :real-start-time
+            :test-interactive? :results-for :test-mode)
+           :unknown))
+        nil nil nil nil nil nil))
+   ((:internal excl::update-to-checking-dfun 2) . #10#)
+   ((:internal (method lift::run-tests-internal #11=(lift:test-mixin))
+     0))
+   ((method lift::do-testing #13=(lift:test-mixin t . #2#)) #3# #5#
+                                                            #12=#<Closure (:internal
+                                                                           (method
+                                                                            lift::run-tests-internal
+                                                                            #11#)
+                                                                           0)
+                                                                  @
+                                                                  #x10fae23a>)
+   (sys::..runtime-operation . :unknown-args)
+   (excl::checking-miss
+      #25=#<standard-generic-function lift::do-testing>
+      #15=(#3# #5# #12#) #27=#<Function (method lift::do-testing #13#)>
+      #28=#(0 #9#
+            #16=#(20792754 t
+                  (lift::name lift::run-setup lift::done-setup?
+                              lift::done-dynamics? lift::prototypes
+                              lift::prototypes-initialized?
+                              lift::current-values
+                              lift::test-slot-names lift::current-step
+                              lift::current-method
+                              lift::save-equality-test lift::log-file
+                              lift::test-data lift::expected-failure-p
+                              lift::expected-error-p
+                              lift::expected-problem-p
+                              lift::suite-initargs lift::profile)
+                  #()
+                  #<standard-class
+                    com.metabang.geohash-test::geohash-test>
+                  0 (t :unknown))
+            nil #14# nil nil nil))
+   ((:internal excl::update-to-checking-dfun 2) . #15#)
+   [... lift::do-testing ]
+   ((method lift::do-testing-in-environment #13#) #3# #5# #12#)
+   ((method lift::do-testing-in-environment :around #13#) #3# #5# #12#)
+   ((:internal (:effective-method 3 nil nil t t) 0) #3# #5# #12#)
+   (sys::..runtime-operation . :unknown-args)
+   (excl::caching-miss
+      #30=#<standard-generic-function lift::do-testing-in-environment>
+      #17=(#3# #5# #12#)
+      #31=#(0 nil #16#
+            #<Closure (:internal (:effective-method 3 nil nil t t) 0) @
+              #x10fac4c2>
+            #14#
+            #<Closure (:internal (:effective-method 3 nil nil t t) 0) @
+              #x10d3f732>
+            nil nil #9#
+            #<Closure (:internal (:effective-method 3 nil nil t t) 0) @
+              #x10fae26a>
+            nil nil nil nil nil nil))
+   ((:internal excl::update-to-caching-dfun 0) . #17#)
+   [... lift::do-testing-in-environment ]
+   ((method lift::run-tests-internal #11#) #3# :result #5#)
+   (sys::..runtime-operation . :unknown-args)
+   ((:internal (:effective-method 1 t t nil nil) 0) #3# :result #5#)
+   (sys::..runtime-operation . :unknown-args)
+   (excl::caching-miss
+      #20=#<standard-generic-function lift::run-tests-internal>
+      #18=(#3# :result #5#)
+      #21=#(0 nil nil nil nil nil nil nil #9#
+            #<Closure (:internal (:effective-method 1 t t nil nil) 0) @
+              #x10fae1f2>
+            #6#
+            #33=#<Function (method lift::run-tests-internal
+                            #19=(symbol))>
+            nil nil nil nil))
+   ((:internal excl::update-to-caching-dfun 0) . #18#)
+   (sys::..runtime-operation . :unknown-args)
+   ((method lift::run-tests-internal #19#)
+      com.metabang.geohash-test::smoketest :result #5#)
+   (sys::..runtime-operation . :unknown-args)
+   (excl::caching-miss #20#
+                       #22=(com.metabang.geohash-test::smoketest
+                            :result #5#)
+                       #21#)
+   ((:internal excl::update-to-caching-dfun 0) . #22#)
+   [... lift::run-tests-internal ]
+   ((method lift::testsuite-run #8#)
+      #23=#<com.metabang.geohash-test::geohash-test geohash-test @
+            #x10fac0ea>
+      #5#)
+   (sys::..runtime-operation . :unknown-args)
+   (excl::initial-dfun (#23# #5#) #24#)
+   ((:internal (method lift::run-tests-internal #11#) 0))
+   ((method lift::do-testing #13#) #23# #5#
+                                   #26=#<Closure (:internal
+                                                  (method
+                                                   lift::run-tests-internal
+                                                   #11#)
+                                                  0)
+                                         @
+                                         #x10fac492>)
+   (sys::..runtime-operation . :unknown-args)
+   (excl::checking-miss #25# #29=(#23# #5# #26#) #27# #28#)
+   ((:internal excl::update-to-checking-dfun 2) . #29#)
+   [... lift::do-testing ]
+   ((method lift::do-testing-in-environment #13#) #23# #5# #26#)
+   ((method lift::do-testing-in-environment :around #13#) #23# #5# #26#)
+   ((:internal (:effective-method 3 nil nil t t) 0) #23# #5# #26#)
+   (sys::..runtime-operation . :unknown-args)
+   (excl::caching-miss #30# #32=(#23# #5# #26#) #31#)
+   ((:internal excl::update-to-caching-dfun 0) . #32#)
+   [... lift::do-testing-in-environment ]
+   ((method lift::run-tests-internal #11#) #23# :result #5#)
+   (sys::..runtime-operation . :unknown-args)
+   ((:internal (:effective-method 1 t t nil nil) 0) #23# :result #5#)
+   (sys::..runtime-operation . :unknown-args)
+   (excl::checking-miss #20# #34=(#23# :result #5#) #33#
+                        #35=#(0 #6# nil nil nil nil nil nil))
+   ((:internal excl::update-to-checking-dfun 2) . #34#)
+   (sys::..runtime-operation . :unknown-args)
+   ((method lift::run-tests-internal #19#) shttp::geohash-test :result
+                                           #5# :profile nil)
+   (sys::..runtime-operation . :unknown-args)
+   (excl::checking-miss #20#
+                        #36=(shttp::geohash-test :result #5# :profile
+                             nil)
+                        #33# #35#)
+   ((:internal excl::update-to-checking-dfun 2) . #36#)
+   (sys::..runtime-operation . :unknown-args)
+   (lift:run-tests :result #5#)
+   (sys::..runtime-operation . :unknown-args)
+   (lift::%run-tests-from-file #37#)
+   (lift::run-tests-from-file :generic)
+   (lift:run-tests)
+   (sys::..runtime-operation . :unknown-args)
+   (funcall lift:run-tests :config :generic)
+   (excl::%invoke #<Function funcall>
+                  #38=((intern (symbol-name '#:run-tests) :lift)
+                       :config :generic))
+   [... excl::eval-as-progn ]
+   (block asdf:perform (funcall . #38#))
+   [... excl::%eval ]
+   ((method asdf:perform :after
+     (asdf:test-op (eql #39=#<asdf:system \"geohash\" @ #x10d451aa>)))
+      #40=#<asdf:test-op nil @ #x10f051da> #39#)
+   (sys::..runtime-operation #40# #39#)
+   ((:internal (:effective-method 2 nil nil nil t) 0) #40# #39#)
+   ((method asdf:perform :around (asdf:test-op asdf:system)) #40# #39#)
+   ((:internal (:effective-method 2 nil nil t t) 0) #40# #39#)
+   (sys::..runtime-operation . :unknown-args)
+   ((:internal excl::effective-method-eql 0) #40# #39#)
+   ((flet asdf:operate excl::continuation))
+   (asdf:operate asdf:test-op shttp::geohash)
+   (sys::..runtime-operation . :unknown-args)
+   (asdf:oos asdf:test-op shttp::geohash)
+   [... excl::%eval ]
+   (eval (asdf:oos 'asdf:test-op 'shttp::geohash))
+   (swank::eval-region #42=\"(asdf:oos 'asdf:test-op 'geohash)
+\" t)
+   ((:internal swank:listener-eval 0))
+   ((:internal (:top-level-form \"swank-allegro.lisp\" 2177) 0)
+      #41=#<Closure (:internal swank:listener-eval 0) @ #x10f05712>)
+   (sys::..runtime-operation . :unknown-args)
+   (swank-backend:call-with-syntax-hooks #41#)
+   (swank::call-with-buffer-syntax #41#)
+   (swank:listener-eval #42#)
+   [... excl::%eval ]
+   (eval #45=(swank:listener-eval #42#))
+   ((:internal swank::eval-for-emacs 0))
+   ((:internal (:top-level-form #47=\"swank-backend.lisp\" 18100) 0)
+      #43=#<Function swank-debugger-hook>
+      #44=#<Closure (:internal swank::eval-for-emacs 0) @ #x10f057b2>)
+   (sys::..runtime-operation . :unknown-args)
+   (swank-backend:call-with-debugger-hook #43# #44#)
+   (swank::eval-for-emacs #45# #46=\"simple-http\" 1629)
+   (sys::..runtime-operation . :unknown-args)
+   (funcall swank::eval-for-emacs #45# #46# 1629)
+   (sys::..runtime-operation . :unknown-args)
+   (swank::read-from-emacs)
+   ((:internal swank::handle-request 0))
+   ((:internal (:top-level-form #47# 18100) 0) #43#
+                                               #48=#<Function (:internal
+                                                               swank::handle-request
+                                                               0)>)
+   (sys::..runtime-operation . :unknown-args)
+   (swank-backend:call-with-debugger-hook #43# #48#)
+   ((:internal swank::call-with-connection 0))
+   (swank::call-with-redirected-io
+      #49=#<swank::connection @ #x1038091a>
+      #50=#<Closure (:internal swank::call-with-connection 0) @
+            #x10f0584a>)
+   (swank::maybe-call-with-io-redirection #49# #50#)
+   (swank::call-with-connection #49# #48#)
+   (swank::handle-request #49#)
+   (swank::repl-loop #49#)
+   ((:internal (:internal swank::spawn-repl-thread 0) 0))
+   (swank::call-with-bindings nil
+                              #<Closure (:internal
+                                         (:internal
+                                          swank::spawn-repl-thread
+                                          0)
+                                         0)
+                                @
+                                #x1039d0f2>)
+   ((:internal swank::spawn-repl-thread 0))
+   (sys::..runtime-operation . :unknown-args)
+   [... excl::thread-bind-and-call ]
+   (excl::thread-reset-catcher)
+   (excl::setup-required-thread-bindings)
+   (excl::lisp-thread-start #<sys::thread repl-thread @ #x6401d822> 2)
+"))
+(
+(:suite smoketest)
+(:name encode-2)
+(:start-time-universal 3423784501)
+(:end-time-universal 3423784501)
+(:problem-kind "Error")
+(:problem-step :testing)
+(:problem-condition "#<undefined-function @ #x10d88eb2>")
+(:problem-condition-description "attempt to call `com.metabang.geohash-test::encode-lat/lon-to-string'
+which is an undefined function.")
+(:problem-backtrace "Evaluation stack:
+
+ ->(sys::..runtime-operation . :unknown-args)
+   (tpl:do-command \"zoom\" :from-read-eval-print-loop nil :count t :all
+                   t)
+   (lift::get-backtrace #1=#<undefined-function @ #x10d88eb2>)
+   ((:internal
+     (method lift::run-test-internal
+      #5=(lift:test-mixin symbol . #2=(t)))
+     3)
+      #1#)
+   (signal #1#)
+   (error #1#)
+   (excl::undeffunc-handler
+      com.metabang.geohash-test::encode-lat/lon-to-string)
+   (excl::general-error-handler 23
+                                com.metabang.geohash-test::encode-lat/lon-to-string
+                                t t)
+   (excl::cer-general-error-handler-one 23
+                                        com.metabang.geohash-test::encode-lat/lon-to-string)
+   (com.metabang.geohash-test::encode-lat/lon-to-string 42.584 -5.59 2)
+   ((method lift::lift-test
+     (com.metabang.geohash-test::smoketest
+      (eql 'com.metabang.geohash-test::encode-2)))
+      #3=#<com.metabang.geohash-test::smoketest smoketest @ #x10d88eca>
+      com.metabang.geohash-test::encode-2)
+   ((method lift::lift-test :around (lift:test-mixin . #2#)) #3#
+                                                             com.metabang.geohash-test::encode-2)
+   ((:internal (:effective-method 2 nil nil t t) 0) #3#
+                                                    com.metabang.geohash-test::encode-2)
+   (sys::..runtime-operation . :unknown-args)
+   ((:internal excl::effective-method-eql 0) #3#
+                                             com.metabang.geohash-test::encode-2)
+   (sys::..runtime-operation . :unknown-args)
+   (excl::checking-miss #<standard-generic-function lift::lift-test>
+                        #4=(#3# com.metabang.geohash-test::encode-2)
+                        #<Closure (:internal
+                                   excl::effective-method-eql
+                                   0)
+                          @ #x10d8947a>
+                        #(0 nil nil nil nil nil nil nil nil nil nil nil
+                          nil nil nil nil nil))
+   ((:internal excl::update-to-checking-dfun 2) . #4#)
+   ((method lift::run-test-internal #5#) #3#
+                                         com.metabang.geohash-test::encode-2
+                                         #6=#<Results for #37=/Users/gwking/darcs/geohash/lift-local.config 1 Test, 1 Error>)
+   [... lift::run-test-internal ]
+   ((method lift::testsuite-run #7=(lift:test-mixin lift::test-result))
+      #3# #6#)
+   (sys::..runtime-operation . :unknown-args)
+   (excl::checking-miss
+      #23=#<standard-generic-function lift::testsuite-run> #8=(#3# #6#)
+      #<Function (method lift::testsuite-run #7#)>
+      #(0 nil nil nil nil nil nil nil nil
+        #12=#(26776809 t
+              (lift::name lift::run-setup lift::done-setup?
+                          lift::done-dynamics? lift::prototypes
+                          lift::prototypes-initialized?
+                          lift::current-values lift::test-slot-names
+                          lift::current-step lift::current-method
+                          lift::save-equality-test lift::log-file
+                          lift::test-data lift::expected-failure-p
+                          lift::expected-error-p
+                          lift::expected-problem-p lift::suite-initargs
+                          lift::profile)
+              #()
+              #<standard-class com.metabang.geohash-test::smoketest> 0
+              (t :unknown))
+        #(18126831 t
+          (lift::results-for lift::tests-run lift::suites-run
+                             lift:failures lift:expected-failures
+                             lift:errors lift:expected-errors
+                             lift::test-mode lift::test-interactive?
+                             lift::real-start-time lift::start-time
+                             lift::end-time lift::real-end-time
+                             lift::real-start-time-universal
+                             lift::start-time-universal
+                             lift::end-time-universal
+                             lift::real-end-time-universal
+                             lift::properties lift::tests-to-skip)
+          #() #<standard-class lift::test-result> 0
+          ((:tests-to-skip :real-start-time-universal :real-start-time
+            :test-interactive? :results-for :test-mode)
+           :unknown))
+        nil nil nil nil nil nil))
+   ((:internal excl::update-to-checking-dfun 2) . #8#)
+   ((:internal (method lift::run-tests-internal #9=(lift:test-mixin))
+     0))
+   ((method lift::do-testing #11=(lift:test-mixin t . #2#)) #3# #6#
+                                                            #10=#<Closure (:internal
+                                                                           (method
+                                                                            lift::run-tests-internal
+                                                                            #9#)
+                                                                           0)
+                                                                  @
+                                                                  #x10d8963a>)
+   (sys::..runtime-operation . :unknown-args)
+   (excl::checking-miss
+      #24=#<standard-generic-function lift::do-testing>
+      #13=(#3# #6# #10#) #26=#<Function (method lift::do-testing #11#)>
+      #27=#(0 #12#
+            #14=#(20792754 t
+                  (lift::name lift::run-setup lift::done-setup?
+                              lift::done-dynamics? lift::prototypes
+                              lift::prototypes-initialized?
+                              lift::current-values
+                              lift::test-slot-names lift::current-step
+                              lift::current-method
+                              lift::save-equality-test lift::log-file
+                              lift::test-data lift::expected-failure-p
+                              lift::expected-error-p
+                              lift::expected-problem-p
+                              lift::suite-initargs lift::profile)
+                  #()
+                  #<standard-class
+                    com.metabang.geohash-test::geohash-test>
+                  0 (t :unknown))
+            nil
+            #15=#(21884036 t
+                  (lift::name lift::run-setup lift::done-setup?
+                              lift::done-dynamics? lift::prototypes
+                              lift::prototypes-initialized?
+                              lift::current-values
+                              lift::test-slot-names lift::current-step
+                              lift::current-method
+                              lift::save-equality-test lift::log-file
+                              lift::test-data lift::expected-failure-p
+                              lift::expected-error-p
+                              lift::expected-problem-p
+                              lift::suite-initargs lift::profile)
+                  #()
+                  #<standard-class simple-http-test::test-http-resolve>
+                  0 (t :unknown))
+            nil nil nil))
+   ((:internal excl::update-to-checking-dfun 2) . #13#)
+   [... lift::do-testing ]
+   ((method lift::do-testing-in-environment #11#) #3# #6# #10#)
+   ((method lift::do-testing-in-environment :around #11#) #3# #6# #10#)
+   ((:internal (:effective-method 3 nil nil t t) 0) #3# #6# #10#)
+   (sys::..runtime-operation . :unknown-args)
+   (excl::caching-miss
+      #29=#<standard-generic-function lift::do-testing-in-environment>
+      #16=(#3# #6# #10#)
+      #30=#(0 nil #14#
+            #<Closure (:internal (:effective-method 3 nil nil t t) 0) @
+              #x10d898e2>
+            #15#
+            #<Closure (:internal (:effective-method 3 nil nil t t) 0) @
+              #x10d3f732>
+            nil nil #12#
+            #<Closure (:internal (:effective-method 3 nil nil t t) 0) @
+              #x10d89672>
+            nil nil nil nil nil nil))
+   ((:internal excl::update-to-caching-dfun 0) . #16#)
+   [... lift::do-testing-in-environment ]
+   ((method lift::run-tests-internal #9#) #3# :result #6#)
+   (sys::..runtime-operation . :unknown-args)
+   ((:internal (:effective-method 1 t t nil nil) 0) #3# :result #6#)
+   (sys::..runtime-operation . :unknown-args)
+   (excl::caching-miss
+      #19=#<standard-generic-function lift::run-tests-internal>
+      #17=(#3# :result #6#)
+      #20=#(0 nil nil nil nil nil nil nil #12#
+            #<Closure (:internal (:effective-method 1 t t nil nil) 0) @
+              #x10d89792>
+            #33=#(18820024 t nil nil #<built-in-class symbol> 0 nil)
+            #32=#<Function (method lift::run-tests-internal
+                            #18=(symbol))>
+            nil nil nil nil))
+   ((:internal excl::update-to-caching-dfun 0) . #17#)
+   (sys::..runtime-operation . :unknown-args)
+   ((method lift::run-tests-internal #18#)
+      com.metabang.geohash-test::smoketest :result #6#)
+   (sys::..runtime-operation . :unknown-args)
+   (excl::caching-miss #19#
+                       #21=(com.metabang.geohash-test::smoketest
+                            :result #6#)
+                       #20#)
+   ((:internal excl::update-to-caching-dfun 0) . #21#)
+   [... lift::run-tests-internal ]
+   ((method lift::testsuite-run #7#)
+      #22=#<com.metabang.geohash-test::geohash-test geohash-test @
+            #x10d89862>
+      #6#)
+   (sys::..runtime-operation . :unknown-args)
+   (excl::initial-dfun (#22# #6#) #23#)
+   ((:internal (method lift::run-tests-internal #9#) 0))
+   ((method lift::do-testing #11#) #22# #6#
+                                   #25=#<Closure (:internal
+                                                  (method
+                                                   lift::run-tests-internal
+                                                   #9#)
+                                                  0)
+                                         @
+                                         #x10d8987a>)
+   (sys::..runtime-operation . :unknown-args)
+   (excl::checking-miss #24# #28=(#22# #6# #25#) #26# #27#)
+   ((:internal excl::update-to-checking-dfun 2) . #28#)
+   [... lift::do-testing ]
+   ((method lift::do-testing-in-environment #11#) #22# #6# #25#)
+   ((method lift::do-testing-in-environment :around #11#) #22# #6# #25#)
+   ((:internal (:effective-method 3 nil nil t t) 0) #22# #6# #25#)
+   (sys::..runtime-operation . :unknown-args)
+   (excl::caching-miss #29# #31=(#22# #6# #25#) #30#)
+   ((:internal excl::update-to-caching-dfun 0) . #31#)
+   [... lift::do-testing-in-environment ]
+   ((method lift::run-tests-internal #9#) #22# :result #6#)
+   (sys::..runtime-operation . :unknown-args)
+   ((:internal (:effective-method 1 t t nil nil) 0) #22# :result #6#)
+   (sys::..runtime-operation . :unknown-args)
+   (excl::checking-miss #19# #34=(#22# :result #6#) #32#
+                        #35=#(0 #33# nil nil nil nil nil nil))
+   ((:internal excl::update-to-checking-dfun 2) . #34#)
+   (sys::..runtime-operation . :unknown-args)
+   ((method lift::run-tests-internal #18#) shttp::geohash-test :result
+                                           #6# :profile nil)
+   (sys::..runtime-operation . :unknown-args)
+   (excl::checking-miss #19#
+                        #36=(shttp::geohash-test :result #6# :profile
+                             nil)
+                        #32# #35#)
+   ((:internal excl::update-to-checking-dfun 2) . #36#)
+   (sys::..runtime-operation . :unknown-args)
+   (lift:run-tests :result #6#)
+   (sys::..runtime-operation . :unknown-args)
+   (lift::%run-tests-from-file #37#)
+   (lift::run-tests-from-file :generic)
+   (lift:run-tests)
+   (sys::..runtime-operation . :unknown-args)
+   (funcall lift:run-tests :config :generic)
+   (excl::%invoke #<Function funcall>
+                  #38=((intern (symbol-name '#:run-tests) :lift)
+                       :config :generic))
+   [... excl::eval-as-progn ]
+   (block asdf:perform (funcall . #38#))
+   [... excl::%eval ]
+   ((method asdf:perform :after
+     (asdf:test-op (eql #39=#<asdf:system \"geohash\" @ #x10d451aa>)))
+      #40=#<asdf:test-op nil @ #x10d89e72> #39#)
+   (sys::..runtime-operation #40# #39#)
+   ((:internal (:effective-method 2 nil nil nil t) 0) #40# #39#)
+   ((method asdf:perform :around (asdf:test-op asdf:system)) #40# #39#)
+   ((:internal (:effective-method 2 nil nil t t) 0) #40# #39#)
+   (sys::..runtime-operation . :unknown-args)
+   ((:internal excl::effective-method-eql 0) #40# #39#)
+   ((flet asdf:operate excl::continuation))
+   (asdf:operate asdf:test-op shttp::geohash)
+   (sys::..runtime-operation . :unknown-args)
+   (asdf:oos asdf:test-op shttp::geohash)
+   [... excl::%eval ]
+   (eval (asdf:oos 'asdf:test-op 'shttp::geohash))
+   (swank::eval-region #42=\"(asdf:oos 'asdf:test-op 'geohash)
+\" t)
+   ((:internal swank:listener-eval 0))
+   ((:internal (:top-level-form \"swank-allegro.lisp\" 2177) 0)
+      #41=#<Closure (:internal swank:listener-eval 0) @ #x10d8a35a>)
+   (sys::..runtime-operation . :unknown-args)
+   (swank-backend:call-with-syntax-hooks #41#)
+   (swank::call-with-buffer-syntax #41#)
+   (swank:listener-eval #42#)
+   [... excl::%eval ]
+   (eval #45=(swank:listener-eval #42#))
+   ((:internal swank::eval-for-emacs 0))
+   ((:internal (:top-level-form #47=\"swank-backend.lisp\" 18100) 0)
+      #43=#<Function swank-debugger-hook>
+      #44=#<Closure (:internal swank::eval-for-emacs 0) @ #x10d8a45a>)
+   (sys::..runtime-operation . :unknown-args)
+   (swank-backend:call-with-debugger-hook #43# #44#)
+   (swank::eval-for-emacs #45# #46=\"simple-http\" 1629)
+   (sys::..runtime-operation . :unknown-args)
+   (funcall swank::eval-for-emacs #45# #46# 1629)
+   (sys::..runtime-operation . :unknown-args)
+   (swank::read-from-emacs)
+   ((:internal swank::handle-request 0))
+   ((:internal (:top-level-form #47# 18100) 0) #43#
+                                               #48=#<Function (:internal
+                                                               swank::handle-request
+                                                               0)>)
+   (sys::..runtime-operation . :unknown-args)
+   (swank-backend:call-with-debugger-hook #43# #48#)
+   ((:internal swank::call-with-connection 0))
+   (swank::call-with-redirected-io
+      #49=#<swank::connection @ #x1038091a>
+      #50=#<Closure (:internal swank::call-with-connection 0) @
+            #x10d8a492>)
+   (swank::maybe-call-with-io-redirection #49# #50#)
+   (swank::call-with-connection #49# #48#)
+   (swank::handle-request #49#)
+   (swank::repl-loop #49#)
+   ((:internal (:internal swank::spawn-repl-thread 0) 0))
+   (swank::call-with-bindings nil
+                              #<Closure (:internal
+                                         (:internal
+                                          swank::spawn-repl-thread
+                                          0)
+                                         0)
+                                @
+                                #x1039d0f2>)
+   ((:internal swank::spawn-repl-thread 0))
+   (sys::..runtime-operation . :unknown-args)
+   [... excl::thread-bind-and-call ]
+   (excl::thread-reset-catcher)
+   (excl::setup-required-thread-bindings)
+   (excl::lisp-thread-start #<sys::thread repl-thread @ #x6401d822> 2)
+"))
+(
+(:suite smoketest)
+(:name encode-5)
+(:start-time-universal 3423784501)
+(:end-time-universal 3423784501)
+(:problem-kind "Error")
+(:problem-step :testing)
+(:problem-condition "#<undefined-function @ #x10dd8efa>")
+(:problem-condition-description "attempt to call `com.metabang.geohash-test::encode-lat/lon-to-string'
+which is an undefined function.")
+(:problem-backtrace "Evaluation stack:
+
+ ->(sys::..runtime-operation . :unknown-args)
+   (tpl:do-command \"zoom\" :from-read-eval-print-loop nil :count t :all
+                   t)
+   (lift::get-backtrace #1=#<undefined-function @ #x10dd8efa>)
+   ((:internal
+     (method lift::run-test-internal
+      #5=(lift:test-mixin symbol . #2=(t)))
+     3)
+      #1#)
+   (signal #1#)
+   (error #1#)
+   (excl::undeffunc-handler
+      com.metabang.geohash-test::encode-lat/lon-to-string)
+   (excl::general-error-handler 23
+                                com.metabang.geohash-test::encode-lat/lon-to-string
+                                t t)
+   (excl::cer-general-error-handler-one 23
+                                        com.metabang.geohash-test::encode-lat/lon-to-string)
+   (com.metabang.geohash-test::encode-lat/lon-to-string 42.584 -5.59 5)
+   ((method lift::lift-test
+     (com.metabang.geohash-test::smoketest
+      (eql 'com.metabang.geohash-test::encode-5)))
+      #3=#<com.metabang.geohash-test::smoketest smoketest @ #x10d88eca>
+      com.metabang.geohash-test::encode-5)
+   ((method lift::lift-test :around (lift:test-mixin . #2#)) #3#
+                                                             com.metabang.geohash-test::encode-5)
+   ((:internal (:effective-method 2 nil nil t t) 0) #3#
+                                                    com.metabang.geohash-test::encode-5)
+   (sys::..runtime-operation . :unknown-args)
+   ((:internal excl::effective-method-eql 0) #3#
+                                             com.metabang.geohash-test::encode-5)
+   (sys::..runtime-operation . :unknown-args)
+   (excl::caching-miss #<standard-generic-function lift::lift-test>
+                       #4=(#3# com.metabang.geohash-test::encode-5)
+                       #(0
+                         #8=#(26776809 t
+                              (lift::name lift::run-setup
+                                          lift::done-setup?
+                                          lift::done-dynamics?
+                                          lift::prototypes
+                                          lift::prototypes-initialized?
+                                          lift::current-values
+                                          lift::test-slot-names
+                                          lift::current-step
+                                          lift::current-method
+                                          lift::save-equality-test
+                                          lift::log-file
+                                          lift::test-data
+                                          lift::expected-failure-p
+                                          lift::expected-error-p
+                                          lift::expected-problem-p
+                                          lift::suite-initargs
+                                          lift::profile)
+                              #()
+                              #<standard-class
+                                com.metabang.geohash-test::smoketest>
+                              0 (t :unknown))
+                         #17=#(18820024 t nil nil
+                               #<built-in-class symbol> 0 nil)
+                         #<Closure (:internal
+                                    excl::effective-method-eql
+                                    0)
+                           @ #x10dd8d2a>
+                         nil nil nil nil nil nil nil nil nil nil nil
+                         nil nil nil nil nil nil nil nil nil nil nil
+                         nil nil nil nil nil nil nil))
+   ((:internal excl::update-to-caching-dfun 0) . #4#)
+   ((method lift::run-test-internal #5#) #3#
+                                         com.metabang.geohash-test::encode-5
+                                         #6=#<Results for #37=/Users/gwking/darcs/geohash/lift-local.config 2 Tests, 2 Errors>)
+   [... lift::run-test-internal ]
+   ((method lift::testsuite-run #7=(lift:test-mixin lift::test-result))
+      #3# #6#)
+   (sys::..runtime-operation . :unknown-args)
+   (excl::checking-miss
+      #24=#<standard-generic-function lift::testsuite-run> #9=(#3# #6#)
+      #<Function (method lift::testsuite-run #7#)>
+      #(0 nil nil nil nil nil nil nil nil #8#
+        #(18126831 t
+          (lift::results-for lift::tests-run lift::suites-run
+                             lift:failures lift:expected-failures
+                             lift:errors lift:expected-errors
+                             lift::test-mode lift::test-interactive?
+                             lift::real-start-time lift::start-time
+                             lift::end-time lift::real-end-time
+                             lift::real-start-time-universal
+                             lift::start-time-universal
+                             lift::end-time-universal
+                             lift::real-end-time-universal
+                             lift::properties lift::tests-to-skip)
+          #() #<standard-class lift::test-result> 0
+          ((:tests-to-skip :real-start-time-universal :real-start-time
+            :test-interactive? :results-for :test-mode)
+           :unknown))
+        nil nil nil nil nil nil))
+   ((:internal excl::update-to-checking-dfun 2) . #9#)
+   ((:internal (method lift::run-tests-internal #10=(lift:test-mixin))
+     0))
+   ((method lift::do-testing #12=(lift:test-mixin t . #2#)) #3# #6#
+                                                            #11=#<Closure (:internal
+                                                                           (method
+                                                                            lift::run-tests-internal
+                                                                            #10#)
+                                                                           0)
+                                                                  @
+                                                                  #x10d8963a>)
+   (sys::..runtime-operation . :unknown-args)
+   (excl::checking-miss
+      #25=#<standard-generic-function lift::do-testing>
+      #13=(#3# #6# #11#) #27=#<Function (method lift::do-testing #12#)>
+      #28=#(0 #8#
+            #14=#(20792754 t
+                  (lift::name lift::run-setup lift::done-setup?
+                              lift::done-dynamics? lift::prototypes
+                              lift::prototypes-initialized?
+                              lift::current-values
+                              lift::test-slot-names lift::current-step
+                              lift::current-method
+                              lift::save-equality-test lift::log-file
+                              lift::test-data lift::expected-failure-p
+                              lift::expected-error-p
+                              lift::expected-problem-p
+                              lift::suite-initargs lift::profile)
+                  #()
+                  #<standard-class
+                    com.metabang.geohash-test::geohash-test>
+                  0 (t :unknown))
+            nil
+            #15=#(21884036 t
+                  (lift::name lift::run-setup lift::done-setup?
+                              lift::done-dynamics? lift::prototypes
+                              lift::prototypes-initialized?
+                              lift::current-values
+                              lift::test-slot-names lift::current-step
+                              lift::current-method
+                              lift::save-equality-test lift::log-file
+                              lift::test-data lift::expected-failure-p
+                              lift::expected-error-p
+                              lift::expected-problem-p
+                              lift::suite-initargs lift::profile)
+                  #()
+                  #<standard-class simple-http-test::test-http-resolve>
+                  0 (t :unknown))
+            nil nil nil))
+   ((:internal excl::update-to-checking-dfun 2) . #13#)
+   [... lift::do-testing ]
+   ((method lift::do-testing-in-environment #12#) #3# #6# #11#)
+   ((method lift::do-testing-in-environment :around #12#) #3# #6# #11#)
+   ((:internal (:effective-method 3 nil nil t t) 0) #3# #6# #11#)
+   (sys::..runtime-operation . :unknown-args)
+   (excl::caching-miss
+      #30=#<standard-generic-function lift::do-testing-in-environment>
+      #16=(#3# #6# #11#)
+      #31=#(0 nil #14#
+            #<Closure (:internal (:effective-method 3 nil nil t t) 0) @
+              #x10d898e2>
+            #15#
+            #<Closure (:internal (:effective-method 3 nil nil t t) 0) @
+              #x10d3f732>
+            nil nil #8#
+            #<Closure (:internal (:effective-method 3 nil nil t t) 0) @
+              #x10d89672>
+            nil nil nil nil nil nil))
+   ((:internal excl::update-to-caching-dfun 0) . #16#)
+   [... lift::do-testing-in-environment ]
+   ((method lift::run-tests-internal #10#) #3# :result #6#)
+   (sys::..runtime-operation . :unknown-args)
+   ((:internal (:effective-method 1 t t nil nil) 0) #3# :result #6#)
+   (sys::..runtime-operation . :unknown-args)
+   (excl::caching-miss
+      #20=#<standard-generic-function lift::run-tests-internal>
+      #18=(#3# :result #6#)
+      #21=#(0 nil nil nil nil nil nil nil #8#
+            #<Closure (:internal (:effective-method 1 t t nil nil) 0) @
+              #x10d89792>
+            #17#
+            #33=#<Function (method lift::run-tests-internal
+                            #19=(symbol))>
+            nil nil nil nil))
+   ((:internal excl::update-to-caching-dfun 0) . #18#)
+   (sys::..runtime-operation . :unknown-args)
+   ((method lift::run-tests-internal #19#)
+      com.metabang.geohash-test::smoketest :result #6#)
+   (sys::..runtime-operation . :unknown-args)
+   (excl::caching-miss #20#
+                       #22=(com.metabang.geohash-test::smoketest
+                            :result #6#)
+                       #21#)
+   ((:internal excl::update-to-caching-dfun 0) . #22#)
+   [... lift::run-tests-internal ]
+   ((method lift::testsuite-run #7#)
+      #23=#<com.metabang.geohash-test::geohash-test geohash-test @
+            #x10d89862>
+      #6#)
+   (sys::..runtime-operation . :unknown-args)
+   (excl::initial-dfun (#23# #6#) #24#)
+   ((:internal (method lift::run-tests-internal #10#) 0))
+   ((method lift::do-testing #12#) #23# #6#
+                                   #26=#<Closure (:internal
+                                                  (method
+                                                   lift::run-tests-internal
+                                                   #10#)
+                                                  0)
+                                         @
+                                         #x10d8987a>)
+   (sys::..runtime-operation . :unknown-args)
+   (excl::checking-miss #25# #29=(#23# #6# #26#) #27# #28#)
+   ((:internal excl::update-to-checking-dfun 2) . #29#)
+   [... lift::do-testing ]
+   ((method lift::do-testing-in-environment #12#) #23# #6# #26#)
+   ((method lift::do-testing-in-environment :around #12#) #23# #6# #26#)
+   ((:internal (:effective-method 3 nil nil t t) 0) #23# #6# #26#)
+   (sys::..runtime-operation . :unknown-args)
+   (excl::caching-miss #30# #32=(#23# #6# #26#) #31#)
+   ((:internal excl::update-to-caching-dfun 0) . #32#)
+   [... lift::do-testing-in-environment ]
+   ((method lift::run-tests-internal #10#) #23# :result #6#)
+   (sys::..runtime-operation . :unknown-args)
+   ((:internal (:effective-method 1 t t nil nil) 0) #23# :result #6#)
+   (sys::..runtime-operation . :unknown-args)
+   (excl::checking-miss #20# #34=(#23# :result #6#) #33#
+                        #35=#(0 #17# nil nil nil nil nil nil))
+   ((:internal excl::update-to-checking-dfun 2) . #34#)
+   (sys::..runtime-operation . :unknown-args)
+   ((method lift::run-tests-internal #19#) shttp::geohash-test :result
+                                           #6# :profile nil)
+   (sys::..runtime-operation . :unknown-args)
+   (excl::checking-miss #20#
+                        #36=(shttp::geohash-test :result #6# :profile
+                             nil)
+                        #33# #35#)
+   ((:internal excl::update-to-checking-dfun 2) . #36#)
+   (sys::..runtime-operation . :unknown-args)
+   (lift:run-tests :result #6#)
+   (sys::..runtime-operation . :unknown-args)
+   (lift::%run-tests-from-file #37#)
+   (lift::run-tests-from-file :generic)
+   (lift:run-tests)
+   (sys::..runtime-operation . :unknown-args)
+   (funcall lift:run-tests :config :generic)
+   (excl::%invoke #<Function funcall>
+                  #38=((intern (symbol-name '#:run-tests) :lift)
+                       :config :generic))
+   [... excl::eval-as-progn ]
+   (block asdf:perform (funcall . #38#))
+   [... excl::%eval ]
+   ((method asdf:perform :after
+     (asdf:test-op (eql #39=#<asdf:system \"geohash\" @ #x10d451aa>)))
+      #40=#<asdf:test-op nil @ #x10d89e72> #39#)
+   (sys::..runtime-operation #40# #39#)
+   ((:internal (:effective-method 2 nil nil nil t) 0) #40# #39#)
+   ((method asdf:perform :around (asdf:test-op asdf:system)) #40# #39#)
+   ((:internal (:effective-method 2 nil nil t t) 0) #40# #39#)
+   (sys::..runtime-operation . :unknown-args)
+   ((:internal excl::effective-method-eql 0) #40# #39#)
+   ((flet asdf:operate excl::continuation))
+   (asdf:operate asdf:test-op shttp::geohash)
+   (sys::..runtime-operation . :unknown-args)
+   (asdf:oos asdf:test-op shttp::geohash)
+   [... excl::%eval ]
+   (eval (asdf:oos 'asdf:test-op 'shttp::geohash))
+   (swank::eval-region #42=\"(asdf:oos 'asdf:test-op 'geohash)
+\" t)
+   ((:internal swank:listener-eval 0))
+   ((:internal (:top-level-form \"swank-allegro.lisp\" 2177) 0)
+      #41=#<Closure (:internal swank:listener-eval 0) @ #x10d8a35a>)
+   (sys::..runtime-operation . :unknown-args)
+   (swank-backend:call-with-syntax-hooks #41#)
+   (swank::call-with-buffer-syntax #41#)
+   (swank:listener-eval #42#)
+   [... excl::%eval ]
+   (eval #45=(swank:listener-eval #42#))
+   ((:internal swank::eval-for-emacs 0))
+   ((:internal (:top-level-form #47=\"swank-backend.lisp\" 18100) 0)
+      #43=#<Function swank-debugger-hook>
+      #44=#<Closure (:internal swank::eval-for-emacs 0) @ #x10d8a45a>)
+   (sys::..runtime-operation . :unknown-args)
+   (swank-backend:call-with-debugger-hook #43# #44#)
+   (swank::eval-for-emacs #45# #46=\"simple-http\" 1629)
+   (sys::..runtime-operation . :unknown-args)
+   (funcall swank::eval-for-emacs #45# #46# 1629)
+   (sys::..runtime-operation . :unknown-args)
+   (swank::read-from-emacs)
+   ((:internal swank::handle-request 0))
+   ((:internal (:top-level-form #47# 18100) 0) #43#
+                                               #48=#<Function (:internal
+                                                               swank::handle-request
+                                                               0)>)
+   (sys::..runtime-operation . :unknown-args)
+   (swank-backend:call-with-debugger-hook #43# #48#)
+   ((:internal swank::call-with-connection 0))
+   (swank::call-with-redirected-io
+      #49=#<swank::connection @ #x1038091a>
+      #50=#<Closure (:internal swank::call-with-connection 0) @
+            #x10d8a492>)
+   (swank::maybe-call-with-io-redirection #49# #50#)
+   (swank::call-with-connection #49# #48#)
+   (swank::handle-request #49#)
+   (swank::repl-loop #49#)
+   ((:internal (:internal swank::spawn-repl-thread 0) 0))
+   (swank::call-with-bindings nil
+                              #<Closure (:internal
+                                         (:internal
+                                          swank::spawn-repl-thread
+                                          0)
+                                         0)
+                                @
+                                #x1039d0f2>)
+   ((:internal swank::spawn-repl-thread 0))
+   (sys::..runtime-operation . :unknown-args)
+   [... excl::thread-bind-and-call ]
+   (excl::thread-reset-catcher)
+   (excl::setup-required-thread-bindings)
+   (excl::lisp-thread-start #<sys::thread repl-thread @ #x6401d822> 2)
+"))
+(
+(:suite smoketest)
+(:name decode-2)
+(:start-time-universal 3423784501)
+(:end-time-universal 3423784502)
+(:problem-kind "Error")
+(:problem-step :testing)
+(:problem-condition "#<undefined-function @ #x10dfac12>")
+(:problem-condition-description "attempt to call `com.metabang.geohash-test::decode-string-to-lat/lon'
+which is an undefined function.")
+(:problem-backtrace "Evaluation stack:
+
+ ->(sys::..runtime-operation . :unknown-args)
+   (tpl:do-command \"zoom\" :from-read-eval-print-loop nil :count t :all
+                   t)
+   (lift::get-backtrace #1=#<undefined-function @ #x10dfac12>)
+   ((:internal
+     (method lift::run-test-internal
+      #4=(lift:test-mixin symbol . #2=(t)))
+     3)
+      #1#)
+   (signal #1#)
+   (error #1#)
+   (excl::undeffunc-handler
+      com.metabang.geohash-test::decode-string-to-lat/lon)
+   (excl::general-error-handler 23
+                                com.metabang.geohash-test::decode-string-to-lat/lon
+                                t t)
+   (excl::cer-general-error-handler-one 23
+                                        com.metabang.geohash-test::decode-string-to-lat/lon)
+   (com.metabang.geohash-test::decode-string-to-lat/lon \"ez\")
+   ((method lift::lift-test
+     (com.metabang.geohash-test::smoketest
+      (eql 'com.metabang.geohash-test::decode-2)))
+      #3=#<com.metabang.geohash-test::smoketest smoketest @ #x10d88eca>
+      com.metabang.geohash-test::decode-2)
+   ((method lift::lift-test :around (lift:test-mixin . #2#)) #3#
+                                                             com.metabang.geohash-test::decode-2)
+   ((:internal (:effective-method 2 nil nil t t) 0) #3#
+                                                    com.metabang.geohash-test::decode-2)
+   (sys::..runtime-operation . :unknown-args)
+   ((:internal excl::effective-method-eql 0) #3#
+                                             com.metabang.geohash-test::decode-2)
+   ((method lift::run-test-internal #4#) #3#
+                                         com.metabang.geohash-test::decode-2
+                                         #5=#<Results for #36=/Users/gwking/darcs/geohash/lift-local.config 3 Tests, 3 Errors>)
+   [... lift::run-test-internal ]
+   ((method lift::testsuite-run #6=(lift:test-mixin lift::test-result))
+      #3# #5#)
+   (sys::..runtime-operation . :unknown-args)
+   (excl::checking-miss
+      #22=#<standard-generic-function lift::testsuite-run> #7=(#3# #5#)
+      #<Function (method lift::testsuite-run #6#)>
+      #(0 nil nil nil nil nil nil nil nil
+        #11=#(26776809 t
+              (lift::name lift::run-setup lift::done-setup?
+                          lift::done-dynamics? lift::prototypes
+                          lift::prototypes-initialized?
+                          lift::current-values lift::test-slot-names
+                          lift::current-step lift::current-method
+                          lift::save-equality-test lift::log-file
+                          lift::test-data lift::expected-failure-p
+                          lift::expected-error-p
+                          lift::expected-problem-p lift::suite-initargs
+                          lift::profile)
+              #()
+              #<standard-class com.metabang.geohash-test::smoketest> 0
+              (t :unknown))
+        #(18126831 t
+          (lift::results-for lift::tests-run lift::suites-run
+                             lift:failures lift:expected-failures
+                             lift:errors lift:expected-errors
+                             lift::test-mode lift::test-interactive?
+                             lift::real-start-time lift::start-time
+                             lift::end-time lift::real-end-time
+                             lift::real-start-time-universal
+                             lift::start-time-universal
+                             lift::end-time-universal
+                             lift::real-end-time-universal
+                             lift::properties lift::tests-to-skip)
+          #() #<standard-class lift::test-result> 0
+          ((:tests-to-skip :real-start-time-universal :real-start-time
+            :test-interactive? :results-for :test-mode)
+           :unknown))
+        nil nil nil nil nil nil))
+   ((:internal excl::update-to-checking-dfun 2) . #7#)
+   ((:internal (method lift::run-tests-internal #8=(lift:test-mixin))
+     0))
+   ((method lift::do-testing #10=(lift:test-mixin t . #2#)) #3# #5#
+                                                            #9=#<Closure (:internal
+                                                                          (method
+                                                                           lift::run-tests-internal
+                                                                           #8#)
+                                                                          0)
+                                                                 @
+                                                                 #x10d8963a>)
+   (sys::..runtime-operation . :unknown-args)
+   (excl::checking-miss
+      #23=#<standard-generic-function lift::do-testing>
+      #12=(#3# #5# #9#) #25=#<Function (method lift::do-testing #10#)>
+      #26=#(0 #11#
+            #13=#(20792754 t
+                  (lift::name lift::run-setup lift::done-setup?
+                              lift::done-dynamics? lift::prototypes
+                              lift::prototypes-initialized?
+                              lift::current-values
+                              lift::test-slot-names lift::current-step
+                              lift::current-method
+                              lift::save-equality-test lift::log-file
+                              lift::test-data lift::expected-failure-p
+                              lift::expected-error-p
+                              lift::expected-problem-p
+                              lift::suite-initargs lift::profile)
+                  #()
+                  #<standard-class
+                    com.metabang.geohash-test::geohash-test>
+                  0 (t :unknown))
+            nil
+            #14=#(21884036 t
+                  (lift::name lift::run-setup lift::done-setup?
+                              lift::done-dynamics? lift::prototypes
+                              lift::prototypes-initialized?
+                              lift::current-values
+                              lift::test-slot-names lift::current-step
+                              lift::current-method
+                              lift::save-equality-test lift::log-file
+                              lift::test-data lift::expected-failure-p
+                              lift::expected-error-p
+                              lift::expected-problem-p
+                              lift::suite-initargs lift::profile)
+                  #()
+                  #<standard-class simple-http-test::test-http-resolve>
+                  0 (t :unknown))
+            nil nil nil))
+   ((:internal excl::update-to-checking-dfun 2) . #12#)
+   [... lift::do-testing ]
+   ((method lift::do-testing-in-environment #10#) #3# #5# #9#)
+   ((method lift::do-testing-in-environment :around #10#) #3# #5# #9#)
+   ((:internal (:effective-method 3 nil nil t t) 0) #3# #5# #9#)
+   (sys::..runtime-operation . :unknown-args)
+   (excl::caching-miss
+      #28=#<standard-generic-function lift::do-testing-in-environment>
+      #15=(#3# #5# #9#)
+      #29=#(0 nil #13#
+            #<Closure (:internal (:effective-method 3 nil nil t t) 0) @
+              #x10d898e2>
+            #14#
+            #<Closure (:internal (:effective-method 3 nil nil t t) 0) @
+              #x10d3f732>
+            nil nil #11#
+            #<Closure (:internal (:effective-method 3 nil nil t t) 0) @
+              #x10d89672>
+            nil nil nil nil nil nil))
+   ((:internal excl::update-to-caching-dfun 0) . #15#)
+   [... lift::do-testing-in-environment ]
+   ((method lift::run-tests-internal #8#) #3# :result #5#)
+   (sys::..runtime-operation . :unknown-args)
+   ((:internal (:effective-method 1 t t nil nil) 0) #3# :result #5#)
+   (sys::..runtime-operation . :unknown-args)
+   (excl::caching-miss
+      #18=#<standard-generic-function lift::run-tests-internal>
+      #16=(#3# :result #5#)
+      #19=#(0 nil nil nil nil nil nil nil #11#
+            #<Closure (:internal (:effective-method 1 t t nil nil) 0) @
+              #x10d89792>
+            #32=#(18820024 t nil nil #<built-in-class symbol> 0 nil)
+            #31=#<Function (method lift::run-tests-internal
+                            #17=(symbol))>
+            nil nil nil nil))
+   ((:internal excl::update-to-caching-dfun 0) . #16#)
+   (sys::..runtime-operation . :unknown-args)
+   ((method lift::run-tests-internal #17#)
+      com.metabang.geohash-test::smoketest :result #5#)
+   (sys::..runtime-operation . :unknown-args)
+   (excl::caching-miss #18#
+                       #20=(com.metabang.geohash-test::smoketest
+                            :result #5#)
+                       #19#)
+   ((:internal excl::update-to-caching-dfun 0) . #20#)
+   [... lift::run-tests-internal ]
+   ((method lift::testsuite-run #6#)
+      #21=#<com.metabang.geohash-test::geohash-test geohash-test @
+            #x10d89862>
+      #5#)
+   (sys::..runtime-operation . :unknown-args)
+   (excl::initial-dfun (#21# #5#) #22#)
+   ((:internal (method lift::run-tests-internal #8#) 0))
+   ((method lift::do-testing #10#) #21# #5#
+                                   #24=#<Closure (:internal
+                                                  (method
+                                                   lift::run-tests-internal
+                                                   #8#)
+                                                  0)
+                                         @
+                                         #x10d8987a>)
+   (sys::..runtime-operation . :unknown-args)
+   (excl::checking-miss #23# #27=(#21# #5# #24#) #25# #26#)
+   ((:internal excl::update-to-checking-dfun 2) . #27#)
+   [... lift::do-testing ]
+   ((method lift::do-testing-in-environment #10#) #21# #5# #24#)
+   ((method lift::do-testing-in-environment :around #10#) #21# #5# #24#)
+   ((:internal (:effective-method 3 nil nil t t) 0) #21# #5# #24#)
+   (sys::..runtime-operation . :unknown-args)
+   (excl::caching-miss #28# #30=(#21# #5# #24#) #29#)
+   ((:internal excl::update-to-caching-dfun 0) . #30#)
+   [... lift::do-testing-in-environment ]
+   ((method lift::run-tests-internal #8#) #21# :result #5#)
+   (sys::..runtime-operation . :unknown-args)
+   ((:internal (:effective-method 1 t t nil nil) 0) #21# :result #5#)
+   (sys::..runtime-operation . :unknown-args)
+   (excl::checking-miss #18# #33=(#21# :result #5#) #31#
+                        #34=#(0 #32# nil nil nil nil nil nil))
+   ((:internal excl::update-to-checking-dfun 2) . #33#)
+   (sys::..runtime-operation . :unknown-args)
+   ((method lift::run-tests-internal #17#) shttp::geohash-test :result
+                                           #5# :profile nil)
+   (sys::..runtime-operation . :unknown-args)
+   (excl::checking-miss #18#
+                        #35=(shttp::geohash-test :result #5# :profile
+                             nil)
+                        #31# #34#)
+   ((:internal excl::update-to-checking-dfun 2) . #35#)
+   (sys::..runtime-operation . :unknown-args)
+   (lift:run-tests :result #5#)
+   (sys::..runtime-operation . :unknown-args)
+   (lift::%run-tests-from-file #36#)
+   (lift::run-tests-from-file :generic)
+   (lift:run-tests)
+   (sys::..runtime-operation . :unknown-args)
+   (funcall lift:run-tests :config :generic)
+   (excl::%invoke #<Function funcall>
+                  #37=((intern (symbol-name '#:run-tests) :lift)
+                       :config :generic))
+   [... excl::eval-as-progn ]
+   (block asdf:perform (funcall . #37#))
+   [... excl::%eval ]
+   ((method asdf:perform :after
+     (asdf:test-op (eql #38=#<asdf:system \"geohash\" @ #x10d451aa>)))
+      #39=#<asdf:test-op nil @ #x10d89e72> #38#)
+   (sys::..runtime-operation #39# #38#)
+   ((:internal (:effective-method 2 nil nil nil t) 0) #39# #38#)
+   ((method asdf:perform :around (asdf:test-op asdf:system)) #39# #38#)
+   ((:internal (:effective-method 2 nil nil t t) 0) #39# #38#)
+   (sys::..runtime-operation . :unknown-args)
+   ((:internal excl::effective-method-eql 0) #39# #38#)
+   ((flet asdf:operate excl::continuation))
+   (asdf:operate asdf:test-op shttp::geohash)
+   (sys::..runtime-operation . :unknown-args)
+   (asdf:oos asdf:test-op shttp::geohash)
+   [... excl::%eval ]
+   (eval (asdf:oos 'asdf:test-op 'shttp::geohash))
+   (swank::eval-region #41=\"(asdf:oos 'asdf:test-op 'geohash)
+\" t)
+   ((:internal swank:listener-eval 0))
+   ((:internal (:top-level-form \"swank-allegro.lisp\" 2177) 0)
+      #40=#<Closure (:internal swank:listener-eval 0) @ #x10d8a35a>)
+   (sys::..runtime-operation . :unknown-args)
+   (swank-backend:call-with-syntax-hooks #40#)
+   (swank::call-with-buffer-syntax #40#)
+   (swank:listener-eval #41#)
+   [... excl::%eval ]
+   (eval #44=(swank:listener-eval #41#))
+   ((:internal swank::eval-for-emacs 0))
+   ((:internal (:top-level-form #46=\"swank-backend.lisp\" 18100) 0)
+      #42=#<Function swank-debugger-hook>
+      #43=#<Closure (:internal swank::eval-for-emacs 0) @ #x10d8a45a>)
+   (sys::..runtime-operation . :unknown-args)
+   (swank-backend:call-with-debugger-hook #42# #43#)
+   (swank::eval-for-emacs #44# #45=\"simple-http\" 1629)
+   (sys::..runtime-operation . :unknown-args)
+   (funcall swank::eval-for-emacs #44# #45# 1629)
+   (sys::..runtime-operation . :unknown-args)
+   (swank::read-from-emacs)
+   ((:internal swank::handle-request 0))
+   ((:internal (:top-level-form #46# 18100) 0) #42#
+                                               #47=#<Function (:internal
+                                                               swank::handle-request
+                                                               0)>)
+   (sys::..runtime-operation . :unknown-args)
+   (swank-backend:call-with-debugger-hook #42# #47#)
+   ((:internal swank::call-with-connection 0))
+   (swank::call-with-redirected-io
+      #48=#<swank::connection @ #x1038091a>
+      #49=#<Closure (:internal swank::call-with-connection 0) @
+            #x10d8a492>)
+   (swank::maybe-call-with-io-redirection #48# #49#)
+   (swank::call-with-connection #48# #47#)
+   (swank::handle-request #48#)
+   (swank::repl-loop #48#)
+   ((:internal (:internal swank::spawn-repl-thread 0) 0))
+   (swank::call-with-bindings nil
+                              #<Closure (:internal
+                                         (:internal
+                                          swank::spawn-repl-thread
+                                          0)
+                                         0)
+                                @
+                                #x1039d0f2>)
+   ((:internal swank::spawn-repl-thread 0))
+   (sys::..runtime-operation . :unknown-args)
+   [... excl::thread-bind-and-call ]
+   (excl::thread-reset-catcher)
+   (excl::setup-required-thread-bindings)
+   (excl::lisp-thread-start #<sys::thread repl-thread @ #x6401d822> 2)
+"))
+(
+(:test-case-count 4)
+(:test-suite-count 2)
+(:failure-count 0)
+(:error-count 4)
+(:expected-failure-count 0)
+(:expected-error-count 0)
+(:start-time-universal 3423784501)
+(:end-time-universal 3423784502)
+(:errors ((("smoketest" . "com.metabang.geohash-test")
+           ("decode-2" . "com.metabang.geohash-test"))
+          (("smoketest" . "com.metabang.geohash-test")
+           ("encode-5" . "com.metabang.geohash-test"))
+          (("smoketest" . "com.metabang.geohash-test")
+           ("encode-2" . "com.metabang.geohash-test"))
+          (("smoketest" . "com.metabang.geohash-test")
+           ("encode-1" . "com.metabang.geohash-test"))))
+)

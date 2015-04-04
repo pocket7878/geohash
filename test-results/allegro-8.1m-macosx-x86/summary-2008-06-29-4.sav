@@ -1,0 +1,19 @@
+(
+(:results-for :generic)
+(:arguments (:config :generic))
+(:features (:acldns :split-sequence :com.metabang.trivial-timeout
+            :asdf-system-connections :asdf-install :|YACC Release 0.98|
+            :has-lockf :has-mkdtemp :asdf :hunchentoot-no-ssl :gwking
+            :allegro-cl-enterprise :ipv6 :acl-socket :hiper-socket
+            :profiler :multiprocessing :flavors :little-endian :gsgc
+            :compiler :use-structs-in-compiler :clos :verify-stack
+            :verify-car-cdr :target-mac :dynload :dlmac :unix :macosx32
+            :macosx :x86 :encapsulating-efs :relative-package-names
+            :module-versions :ieee :ieee-floating-point
+            :conforming-ieee :ics :common-lisp :ansi-cl
+            :draft-ansi-cl-2 :x3j13 :allegro :excl :franz-inc
+            :allegro-version>= :allegro-version= :new-environments
+            :symbol-value-vector :process7 :dynload-acl-library
+            :allegro-v8.1 :no-os-tls :tlsvalues :tlsbnp :ssl-support))
+(:datetime 3423784501)
+)

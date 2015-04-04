@@ -1,0 +1,62 @@
+(
+(:results-for #P"/Users/gwking/darcs/geohash/lift-local.config")
+(:arguments (:suite geohash-test :result
+             #</Users/gwking/darcs/geohash/lift-local.config: no tests defined>))
+(:features (:acldns :split-sequence :com.metabang.trivial-timeout
+            :asdf-system-connections :asdf-install :|YACC Release 0.98|
+            :has-lockf :has-mkdtemp :asdf :hunchentoot-no-ssl :gwking
+            :allegro-cl-enterprise :ipv6 :acl-socket :hiper-socket
+            :profiler :multiprocessing :flavors :little-endian :gsgc
+            :compiler :use-structs-in-compiler :clos :verify-stack
+            :verify-car-cdr :target-mac :dynload :dlmac :unix :macosx32
+            :macosx :x86 :encapsulating-efs :relative-package-names
+            :module-versions :ieee :ieee-floating-point
+            :conforming-ieee :ics :common-lisp :ansi-cl
+            :draft-ansi-cl-2 :x3j13 :allegro :excl :franz-inc
+            :allegro-version>= :allegro-version= :new-environments
+            :symbol-value-vector :process7 :dynload-acl-library
+            :allegro-v8.1 :no-os-tls :tlsvalues :tlsbnp :ssl-support))
+(:datetime 3423784537)
+)
+(
+(:suite smoketest)
+(:name encode-1)
+(:start-time-universal 3423784537)
+(:end-time-universal 3423784537)
+(:seconds 0.0d0)
+(:conses 2008)
+(:result t))
+(
+(:suite smoketest)
+(:name encode-2)
+(:start-time-universal 3423784537)
+(:end-time-universal 3423784537)
+(:seconds 0.0d0)
+(:conses 2288)
+(:result t))
+(
+(:suite smoketest)
+(:name encode-5)
+(:start-time-universal 3423784537)
+(:end-time-universal 3423784537)
+(:seconds 0.0d0)
+(:conses 2712)
+(:result t))
+(
+(:suite smoketest)
+(:name decode-2)
+(:start-time-universal 3423784537)
+(:end-time-universal 3423784537)
+(:seconds 0.0d0)
+(:conses 672)
+(:result t))
+(
+(:test-case-count 4)
+(:test-suite-count 2)
+(:failure-count 0)
+(:error-count 0)
+(:expected-failure-count 0)
+(:expected-error-count 0)
+(:start-time-universal 3423784537)
+(:end-time-universal 3423784537)
+)
