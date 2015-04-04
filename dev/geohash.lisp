@@ -1,9 +1,9 @@
 (in-package #:com.metabang.geohash)
 
-(defconstant +code-to-char+ 
+(defvar *code-to-char*
   "0123456789bcdefghjkmnpqrstuvwxyz")
 
-(defun encode-lat/lon-to-string (lat lon length)
+(defun encode (lat lon length)
   ;; we cons up a fresh lat.lon each time (otherwise, we've got
   ;; self modifying code -- the terror)
   (let ((lat.lon (cons (cons -90 90) (cons -180 180)))
@@ -25,10 +25,10 @@
 			    code (+ code bit))
 		      (setf (cdr pair) midpoint)))
 		(setf even/odd (- 1 even/odd)))
-	   (push (aref +code-to-char+ code) result))
+	   (push (aref *code-to-char* code) result))
       (coerce (nreverse result) 'simple-string))))
  
-(defun decode-string-to-lat/lon (string)
+(defun decode (string)
   ;; we cons up a fresh lat.lon each time (otherwise, we've got
   ;; self modifying code -- the horror)
   (let ((lat.lon (cons (cons -90 90) (cons -180 180)))
@@ -52,9 +52,14 @@
 	      ;; debug
 	      (unless (eql even/odd 0) (print pair))
 	      (setf even/odd (- 1 even/odd))))
-      (cons (midpoint (caar lat.lon) (cdar lat.lon))
-	    (midpoint (cadr lat.lon) (cddr lat.lon)))
-      )))
+      (let ((lat
+             (midpoint (caar lat.lon) (cdar lat.lon)))
+            (lng
+             (midpoint (cadr lat.lon) (cddr lat.lon))))
+        (values
+         (cons lat lng)
+         (cons (- (cdar lat.lon) lat)
+               (- (cddr lat.lon) lng)))))))
 
 (defun char-to-base32 (ch)
   (let ((code (char-code ch)))
@@ -72,10 +77,9 @@
 	   (error "Bad character  ~a" ch)))))
 
 #|
-(decode-string-to-lat/lon "ez")
+(decode "ez")
 
-(decode-string-to-lat/lon "ezs42")
+(decode "ezs42")
 
-(encode-lat/lon-to-string 42.584 -5.59 5)
-
+(encode 42.584 -5.59 5)
 |#
