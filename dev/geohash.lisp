@@ -61,6 +61,30 @@
          (cons (- (cdar lat.lon) lat)
                (- (cddr lat.lon) lng)))))))
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;Neighbor direction
+;;
+;; Dir: (-1 . -1),...(1 . 1)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(defun neighbor (string dir)
+  (multiple-value-bind (lat-lng errors) (decode string)
+    (let ((new-lat (+ (* 2 (car dir) (car errors)) (car lat-lng)))
+          (new-lng (+ (* 2 (cdr dir) (cdr errors)) (cdr lat-lng))))
+      (encode new-lat new-lng (length string)))))
+
+(defun neighbors (string)
+  (multiple-value-bind (lat-lng errors) (decode string)
+    (loop
+       for dx from -1 upto 1
+       append
+         (loop
+            for dy from -1 upto 1
+            if (not (and (zerop dx) (zerop dy)))
+            collect
+              (let ((new-lat (+ (* 2 dx (car errors)) (car lat-lng)))
+                    (new-lng (+ (* 2 dy (cdr errors)) (cdr lat-lng))))
+                (encode new-lat new-lng (length string)))))))
+
 (defun char-to-base32 (ch)
   (let ((code (char-code ch)))
     (cond ((<= (char-code #\0) code (char-code #\9))

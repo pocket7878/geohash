@@ -4,5 +4,7 @@
   (:use #:common-lisp)
   (:nicknames #:geohash)
   (:export #:encode
-	   #:decode))
+	   #:decode
+           #:neighbor
+           #:neighbors))
 
